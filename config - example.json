@@ -1,0 +1,17 @@
+{
+"logs_folder":"./logs/",
+"data_sets_folder":"./data_sets",
+"trained_models_folder":"./trained_models",
+"models":[{
+ "data_set": "PeenTreeBank",
+ "training": true,
+ "testing": false,
+ "checkpoint_number_for_test_or_null_for_last_checkpoint": null,
+  "checkpoint_file_for_test": null,
+ "embedding":[
+  "kim"
+ ]
+}
+]
+}
+

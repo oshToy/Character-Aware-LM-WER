@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "logs_folder": {
+      "type": "string"
+    },
+    "data_sets_folder": {
+      "type": "string"
+    },
+    "trained_models_folder": {
+      "type": "string"
+    },
+
+    "models": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "data_set": {
+              "type": "string"
+            },
+            "training": {
+              "type": "boolean"
+            },
+             "testing": {
+              "type": "boolean"
+            },
+            "checkpoint_number_for_train_or_null_for_last_checkpoint": {
+              "type": ["integer", "null"]
+            },
+
+            "checkpoint_file_for_test": {
+              "type": ["string", "null"]
+            },
+
+            "embedding": {
+              "type": "array"
+            },
+            "fasttext_model_path": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "data_set",
+            "training",
+            "testing",
+            "checkpoint_number_for_test_or_null_for_last_checkpoint",
+            "checkpoint_file_for_test",
+            "embedding",
+            "fasttext_model_path"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "logs_folder",
+    "data_sets_folder",
+    "trained_models_folder",
+    "models"
+  ]
+}
