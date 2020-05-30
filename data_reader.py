@@ -154,8 +154,9 @@ def load_data(data_dir, max_word_length, num_unroll_steps, eos='+', datas=['trai
         for i, char_array in enumerate(char_tokens[fname]):
             char_tensors[fname][i, :len(char_array)] = char_array
 
-    return word_vocab, char_vocab, word_tensors, char_tensors, actual_max_word_length, words, \
-           wers, acoustics
+    return word_vocab, char_vocab, word_tensors, char_tensors, max_word_length, words
+    #return word_vocab, char_vocab, word_tensors, char_tensors, actual_max_word_length, words, \
+    #      wers, acoustics
 
 
 def load_test_data(data_dir, max_word_length, num_unroll_steps, eos='+', datas=['test'], batch_size=25):
